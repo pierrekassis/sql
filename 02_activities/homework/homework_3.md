@@ -36,7 +36,14 @@ ORDER BY c.customer_last_name, c.customer_first_name;
 To insert the new row use VALUES, specifying the value you want for each column:  
 `VALUES(col1,col2,col3,col4,col5)`
 
+CREATE TEMPORARY TABLE temp.new_vendor AS
 
+SELECT * FROM vendors;
+
+
+INSERT INTO temp.new_vendor (vendor_id, vendor_name, vendor_type, vendor_owner_first_name, vendor_owner_last_name)
+
+VALUES ("10", 'Thomass Superfood Store', 'Fresh Focused', 'Thomas', 'Rosenthal');
 
 # Date
 1. Get the customer_id, month, and year (in separate columns) of every purchase in the customer_purchases table.
