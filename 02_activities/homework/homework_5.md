@@ -37,6 +37,7 @@ VALUES ('12345', 'Apple Pie', 'unit', '1', '12.99', '2024-09-19 14:10:59');
 **HINT**: If you don't specify a WHERE clause, [you are going to have a bad time](https://imgflip.com/i/8iq872).
 
 DELETE FROM temp.product_units
+
 WHERE product_id = 12345
 
 
