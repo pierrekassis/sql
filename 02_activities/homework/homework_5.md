@@ -13,7 +13,22 @@
 # INSERT
 1. Create a new table "product_units". This table will contain only products where the `product_qty_type = 'unit'`. It should use all of the columns from the product table, as well as a new column for the `CURRENT_TIMESTAMP`.  Name the timestamp column `snapshot_timestamp`.
 
+CREATE TEMP TABLE product_units AS
+
+SELECT *, 
+    
+CURRENT_TIMESTAMP AS snapshot_timestamp
+
+FROM product
+
+WHERE product_qty_type = 'unit';
+
+
 2. Using `INSERT`, add a new row to the table (with an updated timestamp). This can be any product you desire (e.g. add another record for Apple Pie). 
+
+INSERT INTO product_units
+
+VALUES ('12345', 'Apple Pie', 'unit', '1', '12.99', '2024-09-19 14:10:59');
 
 
 # DELETE 
