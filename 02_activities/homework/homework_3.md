@@ -8,17 +8,24 @@
 1. Write a query that determines how many times each vendor has rented a booth at the farmer’s market by counting the vendor booth assignments per `vendor_id`.
 
 SELECT vendor_id, COUNT(*) AS booth_rental_count
+
 FROM vendor_booth_assignments
+
 GROUP BY vendor_id
 
 2. The Farmer’s Market Customer Appreciation Committee wants to give a bumper sticker to everyone who has ever spent more than $2000 at the market. Write a query that generates a list of customers for them to give stickers to, sorted by last name, then first name. 
 **HINT**: This query requires you to join two tables, use an aggregate function, and use the HAVING keyword.
 
 SELECT c.customer_id, c.customer_first_name, c.customer_last_name, SUM(p.cost_to_customer_per_qty) AS total_spent
+
 FROM customer c
+
 JOIN customer_purchases p ON c.customer_id = p.customer_id
+
 GROUP BY c.customer_id, c.customer_first_name, c.customer_last_name
+
 HAVING SUM(p.cost_to_customer_per_qty) > 2000
+
 ORDER BY c.customer_last_name, c.customer_first_name;
 
 
