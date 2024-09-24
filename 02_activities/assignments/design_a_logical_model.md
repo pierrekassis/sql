@@ -27,7 +27,16 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
 ```
-Your answer...
+Type1
+UPDATE Customer
+SET customer_postal_code = 'New Postal Code'
+WHERE customer_id = '12345';
+
+Type2
+
+
+There are privacy issues because the old addresses remain stored which means more data linked to customer therefore less privacy. It's better to use typ2 to overwrite the old addresses.
+
 ```
 
 ## Question 4
