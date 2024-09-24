@@ -5,20 +5,21 @@ Create a logical model for a small bookstore. 📚
 
 At the minimum it should have employee, order, sales, customer, and book entities (tables). Determine sensible column and table design based on what you know about these concepts. Keep it simple, but work out sensible relationships to keep tables reasonably sized. Include a date table. There are several tools online you can use, I'd recommend [_Draw.io_](https://www.drawio.com/) or [_LucidChart_](https://www.lucidchart.com/pages/).
 
-<img width="710" alt="Screenshot 2024-09-24 151826" src="https://github.com/user-attachments/assets/138944c2-aa14-4967-b289-b7de46635d43">
+<img width="647" alt="Screenshot 2024-09-24 152008" src="https://github.com/user-attachments/assets/5ec065fa-752c-4b55-8123-9abab4a6ed7b">
 
 
-<img width="673" alt="Screenshot 2024-09-23 202255" src="https://github.com/user-attachments/assets/2184aa7d-9637-45fc-8c47-a63582048d6b">
+
+<img width="502" alt="Screenshot 2024-09-24 152117" src="https://github.com/user-attachments/assets/76349bb1-9d88-4a1a-a446-e2f7b6a32e3f">
+
 
 
 
 ## Question 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
 
-<img width="689" alt="Screenshot 2024-09-23 204605" src="https://github.com/user-attachments/assets/330de161-c84e-4b52-a962-037a1385c60d">
+<img width="710" alt="Screenshot 2024-09-24 151826" src="https://github.com/user-attachments/assets/654484b1-db5a-48b8-919a-598dd24f4ddc">
 
-
-<img width="664" alt="Screenshot 2024-09-23 204719" src="https://github.com/user-attachments/assets/4071f3b3-82d1-4cd2-be71-701962055d07">
+<img width="611" alt="Screenshot 2024-09-24 152046" src="https://github.com/user-attachments/assets/79f4aed5-7ef9-4d8c-98f2-32530590cbba">
 
 
 ## Question 3
