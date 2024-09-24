@@ -44,7 +44,15 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-Your answer...
+
+To improve the bookstore database, I would separate the tables into distinct sections for better organization and clarity.
+
+These sections would include one for staff and human resources, one for sales and orders, one for purchases, and one for customers. This will create a clearer structure and allow for more specific tables tailored to the needs of the bookstore.
+
+Additionally, I would introduce a dedicated section for password management to enhance security, especially for employees, and incorporate more emphasis on dates throughout the database. Dates are crucial for tracking employee accessibility and ensuring that not all employees have access to sensitive information.
+
+Furthermore, I would include provisions for secure online payments, which are currently absent in my design. Lastly, I would expand the book-related tables to improve search functionality and ensure data accuracy, reducing the chances of mistakes when managing inventory and customer queries.
+
 ```
 
 # Criteria
