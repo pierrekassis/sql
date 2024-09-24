@@ -5,8 +5,22 @@ Create a logical model for a small bookstore. 📚
 
 At the minimum it should have employee, order, sales, customer, and book entities (tables). Determine sensible column and table design based on what you know about these concepts. Keep it simple, but work out sensible relationships to keep tables reasonably sized. Include a date table. There are several tools online you can use, I'd recommend [_Draw.io_](https://www.drawio.com/) or [_LucidChart_](https://www.lucidchart.com/pages/).
 
+<img width="647" alt="Screenshot 2024-09-24 152008" src="https://github.com/user-attachments/assets/5ec065fa-752c-4b55-8123-9abab4a6ed7b">
+
+
+
+<img width="502" alt="Screenshot 2024-09-24 152117" src="https://github.com/user-attachments/assets/76349bb1-9d88-4a1a-a446-e2f7b6a32e3f">
+
+
+
+
 ## Question 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+<img width="710" alt="Screenshot 2024-09-24 151826" src="https://github.com/user-attachments/assets/654484b1-db5a-48b8-919a-598dd24f4ddc">
+
+<img width="611" alt="Screenshot 2024-09-24 152046" src="https://github.com/user-attachments/assets/79f4aed5-7ef9-4d8c-98f2-32530590cbba">
+
 
 ## Question 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2?
@@ -15,7 +29,16 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
 ```
-Your answer...
+Type1
+UPDATE Customer
+SET customer_postal_code = 'New Postal Code'
+WHERE customer_id = '12345';
+
+Type2
+
+
+There are privacy issues because the old addresses remain stored which means more data linked to customer therefore less privacy. It's better to use typ2 to overwrite the old addresses.
+
 ```
 
 ## Question 4
@@ -23,7 +46,15 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-Your answer...
+
+To improve the bookstore database, I would separate the tables into distinct sections for better organization and clarity.
+
+These sections would include one for staff and human resources, one for sales and orders, one for purchases, and one for customers. This will create a clearer structure and allow for more specific tables tailored to the needs of the bookstore.
+
+Additionally, I would introduce a dedicated section for password management to enhance security, especially for employees, and incorporate more emphasis on dates throughout the database. Dates are crucial for tracking employee accessibility and ensuring that not all employees have access to sensitive information.
+
+Furthermore, I would include provisions for secure online payments, which are currently absent in my design. Lastly, I would expand the book-related tables to improve search functionality and ensure data accuracy, reducing the chances of mistakes when managing inventory and customer queries.
+
 ```
 
 # Criteria
